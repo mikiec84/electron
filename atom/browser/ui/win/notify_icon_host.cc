@@ -56,7 +56,7 @@ NotifyIconHost::NotifyIconHost()
   WNDCLASSEX window_class;
   base::win::InitializeWindowClass(
       kNotifyIconHostWindowClass,
-      &base::win::WrappedWindowProc<&NotifyIconHost::WndProcStatic>,
+      &NotifyIconHost::WndProcStatic,
       0, 0, 0, NULL, NULL, NULL, NULL, NULL,
       &window_class);
   instance_ = window_class.hInstance;

@@ -128,7 +128,7 @@ void SystemPreferences::InitializeWindow() {
   WNDCLASSEX window_class;
   base::win::InitializeWindowClass(
       kSystemPreferencesWindowClass,
-      &base::win::WrappedWindowProc<SystemPreferences::WndProcStatic>,
+      &SystemPreferences::WndProcStatic,
       0, 0, 0, NULL, NULL, NULL, NULL, NULL,
       &window_class);
   instance_ = window_class.hInstance;
