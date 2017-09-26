@@ -8,7 +8,9 @@
 #include "atom/common/native_mate_converters/string16_converter.h"
 #include "base/strings/utf_string_conversions.h"
 #include "third_party/skia/include/core/SkBitmap.h"
+#if 0  // FIXME(alexeykuzmin)
 #include "third_party/skia/tools/sk_tool_utils.h"
+#endif
 #include "ui/base/clipboard/scoped_clipboard_writer.h"
 
 #include "atom/common/node_includes.h"
