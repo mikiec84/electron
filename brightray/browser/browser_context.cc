@@ -145,8 +145,6 @@ net::NetworkDelegate* BrowserContext::CreateNetworkDelegate() {
 }
 
 std::string BrowserContext::GetMediaDeviceIDSalt() {
-  if (IsOffTheRecord())
-    return nullptr;
   if (!media_device_id_salt_.get())
     media_device_id_salt_.reset(new MediaDeviceIDSalt(prefs_.get()));
   return media_device_id_salt_->GetSalt();
